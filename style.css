@@ -91,10 +91,8 @@ ul {
 	color: #000000;
 	margin-top: 1rem;
 	
-	font-size: 2.2vh;
 	text-align: left;
 	line-height: 2.7vh;
-	letter-spacing: 0.05vh;
 	width: 75%;
 	margin: 0 auto;
   left: 50%;
@@ -273,10 +271,8 @@ p.who {
 	color: #000000;
 	margin-top: 1rem;
 	
-	font-size: 2.2vh;
 	text-align: left;
 	line-height: 2.7vh;
-	letter-spacing: 0.05vh;
 	width: 80%;
 	margin: 0 auto;
 }
@@ -286,7 +282,7 @@ ul {
 }
 
 li {	
-	width: 100%;
+	width: auto;
 	position: fixed;
 	font-weight: 200;
 	text-align: left;
@@ -314,13 +310,11 @@ li span:hover {
 	font-weight: 200;
 	right: 10vw;
 	text-align: right;
-	font-size: 2.2vh;
 	line-height: 2.7vh;
-	letter-spacing: 0.05vh;
 	
-	-webkit-transform: translate(calc(10vw - 3rem), -0.8vh);
-        -ms-transform: translate(calc(10vw - 3rem), -0.8vh);
-        transform: translate(calc(10vw - 3rem), -0.8vh);
+	-webkit-transform: translate(calc(10vw - 3rem), -0.2vh);
+        -ms-transform: translate(calc(10vw - 3rem), -0.2vh);
+        transform: translate(calc(10vw - 3rem), -0.2vh);
 }
 
 p.text {	
@@ -331,9 +325,7 @@ p.text {
 	text-shadow: 1px 1px 1px #fff;
 	margin-top: 2rem;
 	
-	font-size: 2.2vh;
 	line-height: 2.7vh;
-	letter-spacing: 0.05vh;
 	
     width: 80vw;
     margin: 0 auto;	
@@ -362,32 +354,26 @@ p.cap {
 	text-align: center;
 	
 	font-weight: 400;
-	font-size: 2.2vh;
 	line-height: 2.7vh;
-	letter-spacing: 0.05vh;
 	
 	margin-left: auto;
 	margin-right: auto;
 }
 p.ref {
 	font-weight: 200;
-	font-size: 2.2vh;
 	line-height: 2.9vh;
-	letter-spacing: 0.05vh;
 	
 	padding-left: 50%;
 	margin-left: auto;
 	margin-right: auto;
 	
-	-webkit-transform: translateY(-4.5vh);
-        -ms-transform: translateY(-4.5vh);
-        transform: translateY(-4.5vh);
+	-webkit-transform: translateY(-4.75vh);
+        -ms-transform: translateY(-4.75vh);
+        transform: translateY(-4.75vh);
 }
 p.ref1 {
 	font-weight: 200;
-	font-size: 2.2vh;
 	line-height: 2.9vh;
-	letter-spacing: 0.05vh;
 	
 	padding-right: 50%;
 	margin-left: auto;
@@ -398,9 +384,9 @@ p.ref1 {
 /*MEDIA QUERY*/
 @media only screen and (max-width : 740px) {
 body, .navSocial {
-	font-size: 2.2vh;
-	line-height: 2.7vh;
-	letter-spacing: 0.05vh;
+	font-size: 2.9vh;
+	line-height: 3.5vh;
+	letter-spacing: 0.055vh;
 	color: #111;
 }
 	
@@ -454,7 +440,7 @@ p.space {
 .sidenav .closebtn {
     position: absolute;
     top: 2rem;
-    font-size: 2rem;
+    font-size: 3rem;
 	width: 100%;
 	text-align: center;
     color: #111;
@@ -477,24 +463,24 @@ li {
 	text-align: right;
 }
 ul li:nth-of-type(2) {
-	-webkit-transform: translateY(3.2vh);
-        -ms-transform: translateY(3.2vh);
-        transform: translateY(3.2vh);
+	-webkit-transform: translateY(3.7vh);
+        -ms-transform: translateY(3.7vh);
+        transform: translateY(3.7vh);
 }
+	p.who {
+		line-height: 3.8vh;
+	}
 .navSocial {	
-	-webkit-transform: translate(10vw, -2vh);
-        -ms-transform: translate(10vw, -2vh);
-        transform: translate(10vw, -2vh);
+	-webkit-transform: translate(10vw, -2.2vh);
+        -ms-transform: translate(10vw, -2.2vh);
+        transform: translate(10vw, -2.2vh);
 }
 p.cap {
 	padding: 0;
 	text-align: left;
 }
 p.ref {
-	font-weight: 200;
-	font-size: 2.2vh;
-	line-height: 2.9vh;
-	letter-spacing: 0.05vh;
+	line-height: 3.8vh;
 	padding-left: 0%;
 	width: 100%;
 	margin-left: auto;
@@ -505,10 +491,7 @@ p.ref {
         transform: translateY(0vh);
 }
 p.ref1 {
-	font-weight: 200;
-	font-size: 2.2vh;
-	line-height: 2.9vh;
-	letter-spacing: 0.05vh;
+	line-height: 3.8vh;
 	
 	padding-right: 0%;
 	margin-left: auto;

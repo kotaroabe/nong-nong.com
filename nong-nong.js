@@ -10,7 +10,8 @@ $('body').delay(300).fadeIn("slow");
 jQuery(function($){
     $("img.lazy").lazyload({
         effect: 'fadeIn',
-        effectspeed: 1000
+        effectspeed: 1000,
+		threashold: 100
     });
 });
 
@@ -53,11 +54,11 @@ jQuery(function($){
 });
 
 
-if ($(window).width() < 740) {
+if ($(window).width() > 740) {
 	
 	function openNav() {
-		document.getElementById("mySidenav").style.width = "100vw";
-		document.getElementById("main").style.marginLeft = "100vw";
+		document.getElementById("mySidenav").style.width = "51vw";
+		document.getElementById("main").style.marginLeft = "51vw";
 	}
 
 	function closeNav() {
@@ -68,8 +69,8 @@ if ($(window).width() < 740) {
 
 else {
 	function openNav() {
-		document.getElementById("mySidenav").style.width = "51vw";
-		document.getElementById("main").style.marginLeft = "51vw";
+		document.getElementById("mySidenav").style.width = "100vw";
+		document.getElementById("main").style.marginLeft = "100vw";
 	}
 
 	function closeNav() {
