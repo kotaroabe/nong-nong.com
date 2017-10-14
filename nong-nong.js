@@ -1,35 +1,15 @@
 // external js: masonry.pkgd.js, imagesloaded.pkgd.js
 
 $('head').append(
-'<style type="text/css">body {display:none;}'
+	'<style type="text/css">body {display:none;}'
 );
 $(window).load(function() {
-$('body').delay(300).fadeIn("slow");
+	$('body').delay(300).fadeIn("slow");
 });
-
-jQuery(function($){
-    $("img.lazy").lazyload({
-        effect: 'fadeIn',
-        effectspeed: 1000,
-		threashold: 100
-    });
-});
-
-//$(".lazyFade").css({
-// WebkitFilter: 'blur(3px)'
-//})
-//
-//
-//$('.grid').masonry({
-//  // options
-//  itemSelector: '.grid-item',
-//  columnWidth: 20%,
-//  isFitWidth: true
-//});
-
 
 $(document).ready(function () {
 	$('p.navSocial').hide();
+	$('p.who').hide();
 	 $("ul li:nth-of-type(2)").click(function () {
         $("p.navSocial").slideToggle();
     });
@@ -49,10 +29,10 @@ $('ul li:nth-of-type(2)').each(function() {
 jQuery(function($){
     $("img.lazy").lazyload({
         effect: 'fadeIn',
-        effectspeed: 100
+        effectspeed: 300,
+		threashold: 0
     });
 });
-
 
 if ($(window).width() > 740) {
 	
