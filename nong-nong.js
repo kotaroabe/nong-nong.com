@@ -9,7 +9,6 @@ $(window).load(function() {
 
 $(document).ready(function () {
 	$('p.navSocial').hide();
-	$('p.who').hide();
 	 $("ul li:nth-of-type(2)").click(function () {
         $("p.navSocial").slideToggle();
     });
@@ -38,12 +37,12 @@ if ($(window).width() > 740) {
 	
 	function openNav() {
 		document.getElementById("mySidenav").style.width = "51vw";
-		document.getElementById("main").style.marginLeft = "51vw";
+    	// document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 	}
 
 	function closeNav() {
 		document.getElementById("mySidenav").style.width = "0";
-		document.getElementById("main").style.marginLeft = "0";
+    	// document.body.style.backgroundColor = "white";
 	}
 } 
 
