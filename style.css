@@ -5,6 +5,12 @@ http://kotaroabe.com/
 
 @font-face {
 	font-family: Brown;
+	src: url("fonts/Brown-Light.otf") format("opentype");
+   	font-style: normal;
+  	font-weight: 200;
+}
+@font-face {
+	font-family: Brown;
 	src: url("fonts/Brown-Regular.otf") format("opentype");
    	font-style: normal;
   	font-weight: 400;
@@ -14,12 +20,6 @@ http://kotaroabe.com/
 	src: url("fonts/Brown-Bold.otf") format("opentype");
    	font-style: normal;
   	font-weight: 700;
-}
-@font-face {
-	font-family: Brown;
-	src: url("fonts/Brown-Light.otf") format("opentype");
-   	font-style: normal;
-  	font-weight: 200;
 }
 
 html {
@@ -32,7 +32,7 @@ body {
 	font-size: 2.2vh;
 	text-align: left;
 	line-height: 2.7vh;
-	letter-spacing: 0.05vh;
+	letter-spacing: 0.01vh;
 	color: #111;
 }
 ul {
@@ -58,7 +58,8 @@ img, iframe {
     z-index: 11; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #F0F0F0; /* Black*/
+	background-color: #4cc38f;
+/*    background-color: #F0F0F0;*/
     /*padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 	
@@ -67,15 +68,16 @@ img, iframe {
 
 /* The navigation menu links */
 .sidenav a {
-    color: #818181;
+    color: #111;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: #ddd;
 }
 
 .sidenav .closebtn {
+	color: #111;
 	font-weight: 200;
     position: absolute;
     top: 1.2rem;
@@ -93,7 +95,7 @@ img, iframe {
 .who {
 	position: absolute;
 	font-weight: 400;
-	color: #000000;
+	color: #111;
 	margin-top: 1rem;
 	
 	text-align: left;
@@ -108,7 +110,6 @@ img, iframe {
 }
 p.who {
 	font-weight: 200;
-	color: #000000;
 	margin-top: 1rem;
 	
 	text-align: left;
@@ -120,10 +121,17 @@ p.who span.left {
 	text-align: right;
 }
 p.who span.b {
+	font-weight: 700;
+}
+p.who span.r {
 	font-weight: 400;
 }
+p.who span.white {
+	background-color: #fff;
+	padding: 3px 3px 2px 3px;
+}
 p.who a {
-	text-shadow: 1px 1px 1px #fff;
+	text-shadow: 0.5px 0.5px 1.5px #fff;
 }
 .content {
 	height: 90vh;
@@ -141,15 +149,30 @@ li {
 	position: fixed;
 	font-weight: 200;
 	text-align: left;
-	color: #000000;
+	color: #111;
 	display: block;
 	text-shadow: 1px 1px 1px #fff;
 	margin-top: 0rem;
+}
+ul li:nth-of-type(1) {
+/*
+	transform-origin: left top;
+	-ms-transform: rotate(270deg); 
+    -webkit-transform: rotate(270deg); 
+    transform: rotate(270deg);
+*/
 }
 ul li:nth-of-type(2) {
 	right: 2vw;
 	font-weight: 200;
 	text-align: right;
+	
+/*
+	transform-origin: right top;
+	-ms-transform: rotate(90deg); 
+    -webkit-transform: rotate(90deg); 
+    transform: rotate(90deg);
+*/
 }
 li span {
 	border-bottom: 1px solid currentColor; /* Or whatever color you want */
@@ -170,6 +193,7 @@ li span:hover {
 */
 }
 #wrapper {
+	z-index: 2;
     width: 80vw;
     margin: 0 auto;
 }
@@ -200,6 +224,7 @@ li span:hover {
 
 .item :hover {
 }
+
 .item img{
 	opacity: 1;
 	
@@ -213,25 +238,27 @@ li span:hover {
   -moz-transition:.2s ease-in-out;
   -webkit-transition:.2s ease-in-out;
   transition:.2s ease-in-out;
-	-webkit-transform: translateY(2vh);
-        -ms-transform: translateY(2vh);
-        transform: translateY(2vh);
-	
-	z-index: 1;
-}
-.item :hover img{
-	
-	opacity: 1;
 	-webkit-transform: translateY(-2vh);
         -ms-transform: translateY(-2vh);
         transform: translateY(-2vh);
 	
+	z-index: 1;
+}
+
+.item :hover img{
+	
+	opacity: 1;
+	-webkit-transform: translateY(2vh);
+        -ms-transform: translateY(2vh);
+        transform: translateY(2vh);
+	
 	z-index: 100 !important;
 }
+
 p.year {
 	font-weight: 200;
 	text-align: left;
-	color: #000000;
+	color: #111;
 	display: block;
 	text-shadow: 1px 1px 1px #fff;
 	
@@ -240,9 +267,11 @@ p.year {
         transform: translateY(2.7vh);
 	
 }
+
 p.name {
+	font-weight: 200;
 	text-align: right;
-	color: #000000;
+	color: #222;
 	display: block;
 	text-shadow: 1px 1px 1px #fff;
 	margin-top: 0;
@@ -254,6 +283,12 @@ p.name {
         -webkit-column-count: 2;
         column-count: 2;
     }
+	
+	.content {
+		height: 85vh;
+		overflow: auto;
+		top: 14vh;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
@@ -265,23 +300,29 @@ p.name {
         -webkit-column-count: 3;
         column-count: 3;
 	}
+	
 	.item {	
 	    margin: 1vw 0 5vw;
 	}
+	
+	.content {
+		height: 90vh;
+		overflow: auto;
+		top: 9vh;
+	}
 }
-
 a {
-	color: #000;
+	color: #222;
 	text-decoration: none;
 	line-height: 0px;
 }
 body {
 	margin: 0% 0% 0% 0%;
 	line-height: 0px;
-	color: #000;
+	color: #222;
 }
 p {
-	color: #000;
+	color: #222;
 }
 iframe {
 	height: 80vw;
@@ -298,6 +339,7 @@ body>div#header {
 }
 }
 p.title {
+	z-index: -1;
 	color: #111;
 	font-weight: 700;
 	position: absolute;
@@ -332,15 +374,14 @@ p.space {
 	text-align: right;
 	line-height: 2.7vh;
 	
-	-webkit-transform: translate(calc(10vw - 3rem), -0.2vh);
-        -ms-transform: translate(calc(10vw - 3rem), -0.2vh);
-        transform: translate(calc(10vw - 3rem), -0.2vh);
+	-webkit-transform: translate(calc(10vw - 2vw), -0.2vh);
+        -ms-transform: translate(calc(10vw - 2vw), -0.2vh);
+        transform: translate(calc(10vw - 2vw), -0.2vh);
 }
 
 p.text {	
 	font-weight: 400;
 	text-align: left;
-	color: #000000;
 	display: block;
 	text-shadow: 1px 1px 1px #fff;
 	margin-top: 2rem;
@@ -401,12 +442,15 @@ p.ref1 {
 }
 
 
+
+
+
 /*MEDIA QUERY*/
 @media only screen and (max-width : 740px) {
 body, .navSocial {
 	font-size: 2.7vh;
 	line-height: 3.5vh;
-	letter-spacing: 0.055vh;
+	letter-spacing: 0.035vh;
 	color: #111;
 }
 	
@@ -458,7 +502,6 @@ p.space {
 	line-height: 1.25em;
 }
 .sidenav {
-	color: #111;
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
@@ -470,25 +513,12 @@ p.space {
 	
     overflow: scroll;
 }
-
-/* The navigation menu links */
-.sidenav a {
-    color: #111;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
 .sidenav .closebtn {
     position: absolute;
     top: 2rem;
     font-size: 3rem;
 	width: 100%;
 	text-align: center;
-    color: #111;
-	text-shadow: 0.1rem 0.1rem 0 #ffffff;
-	background-color: #fff;
 	right: 0;
 }
 .item img{

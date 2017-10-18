@@ -33,27 +33,38 @@ jQuery(function($){
     });
 });
 
-if ($(window).width() > 740) {
+if ($(window).width() > 1200) {
+	/* three columns */
 	
 	function openNav() {
 		document.getElementById("mySidenav").style.width = "51vw";
-    	// document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 	}
 
 	function closeNav() {
 		document.getElementById("mySidenav").style.width = "0";
-    	// document.body.style.backgroundColor = "white";
 	}
 } 
-
-else {
+else if ($(window).width() > 740) {
+	/* two columns */
+	
 	function openNav() {
-		document.getElementById("mySidenav").style.width = "100vw";
-		document.getElementById("main").style.marginLeft = "100vw";
+		document.getElementById("mySidenav").style.width = "51vw";
 	}
 
 	function closeNav() {
 		document.getElementById("mySidenav").style.width = "0";
-		document.getElementById("main").style.marginLeft = "0";
+	}
+} 
+else {
+	/* one column */
+	
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "100vw";
+		/* document.getElementById("main").style.marginLeft = "100vw"; */
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+		/* document.getElementById("main").style.marginLeft = "0"; */
 	}
 }
