@@ -47,6 +47,9 @@ img, iframe {
 .lazy {
 	width: 80vw;
 }
+.lazy1 {
+	width: 50vw;
+}
 .lazyFade {
 }
 
