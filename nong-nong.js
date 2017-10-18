@@ -1,10 +1,12 @@
 // external js: masonry.pkgd.js, imagesloaded.pkgd.js
 
 $('head').append(
-	'<style type="text/css">body {display:none;}'
+	'<style type="text/css">body {display:none;}',
+	'<style type="text/css">.who{opacity: 0;margin-top:10px;}'
 );
+
 $(window).load(function() {
-	$('body').delay(300).fadeIn("slow");
+	$('body').delay(200).fadeIn("slow");
 });
 
 $(document).ready(function () {
@@ -35,36 +37,67 @@ jQuery(function($){
 
 if ($(window).width() > 1200) {
 	/* three columns */
-	
+
+	var delaySpeed = 250;
+    var fadeSpeed = 1000;
+
 	function openNav() {
-		document.getElementById("mySidenav").style.width = "51vw";
+		$("#mySidenav").css({"width": "51vw"});
+        $('.who').each(function(i){
+            $(this).delay(i*(delaySpeed)).animate({opacity:'1',marginTop:'0px'},fadeSpeed);
+        });
 	}
 
 	function closeNav() {
-		document.getElementById("mySidenav").style.width = "0";
+		$('.who').each(function(i){
+            $(this).delay(i*(delaySpeed)).animate({opacity:'0',marginTop:'10px'},fadeSpeed/10);
+        });
+		setTimeout(function(){
+			$("#mySidenav").css({"width": "0"});
+    	}, 500);
 	}
 } 
 else if ($(window).width() > 740) {
 	/* two columns */
-	
+
+	var delaySpeed = 250;
+    var fadeSpeed = 1000;
+
 	function openNav() {
-		document.getElementById("mySidenav").style.width = "51vw";
+		$("#mySidenav").css({"width": "51vw"});
+        $('.who').each(function(i){
+            $(this).delay(i*(delaySpeed)).animate({opacity:'1',marginTop:'0px'},fadeSpeed);
+        });
 	}
 
 	function closeNav() {
-		document.getElementById("mySidenav").style.width = "0";
+		$('.who').each(function(i){
+            $(this).delay(i*(delaySpeed)).animate({opacity:'0',marginTop:'10px'},fadeSpeed/10);
+        });
+		setTimeout(function(){
+			$("#mySidenav").css({"width": "0"});
+    	}, 500);
 	}
 } 
 else {
 	/* one column */
-	
+
+	var delaySpeed = 250;
+    var fadeSpeed = 1000;
+
 	function openNav() {
-		document.getElementById("mySidenav").style.width = "100vw";
-		/* document.getElementById("main").style.marginLeft = "100vw"; */
+		$("#mySidenav").css({"width": "100vw"});
+        $('.who').each(function(i){
+            $(this).delay(i*(delaySpeed)).animate({opacity:'1',marginTop:'0px'},fadeSpeed);
+        });
 	}
 
 	function closeNav() {
-		document.getElementById("mySidenav").style.width = "0";
-		/* document.getElementById("main").style.marginLeft = "0"; */
+		$('.who').each(function(i){
+            $(this).delay(i*(delaySpeed)).animate({opacity:'0',marginTop:'10px'},fadeSpeed/10);
+        });
+		setTimeout(function(){
+			$("#mySidenav").css({"width": "0"});
+    	}, 500);
 	}
 }
