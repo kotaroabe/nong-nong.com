@@ -19,8 +19,6 @@ $(document).ready(function () {
 
 $('ul li:nth-of-type(2)').each(function() {
     $(this).show(0).on('click', function(e) {
-        // This is only needed if your using an anchor to target the "box" elements
-        e.preventDefault();
         
         // Find the next "box" element in the DOM
         $(this).next('.navSocial').slideToggle('fast');
@@ -63,7 +61,7 @@ if ($(window).width() > 1200) {
         });
 		setTimeout(function(){
 			$("#mySidenav").css({"width": "0"});
-    	}, 500);
+    	}, 300);
 	}
 } 
 else if ($(window).width() > 740) {
@@ -87,7 +85,7 @@ else if ($(window).width() > 740) {
         });
 		setTimeout(function(){
 			$("#mySidenav").css({"width": "0"});
-    	}, 500);
+    	}, 300);
 	}
 } 
 else {
@@ -109,6 +107,6 @@ else {
         });
 		setTimeout(function(){
 			$("#mySidenav").css({"width": "0"});
-    	}, 500);
+    	}, 300);
 	}
 }
