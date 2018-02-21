@@ -28,11 +28,11 @@ html {
 body {
 	background: #ffffff;
 	font-family: Brown, "Helvetica Neue", Helvetica, Arial, "sans-serif";
-  	font-weight: 400;
-	font-size: 2.2vh;
+  	font-weight: Bold;
+	font-size: 2.0vh;
 	text-align: left;
 	line-height: 2.7vh;
-	letter-spacing: 0.01vh;
+	letter-spacing: 0.07vh;
 	color: #111;
 }
 ul {
@@ -61,8 +61,8 @@ img, iframe {
     z-index: 11; /* Stay on top */
     top: 0;
     left: 0;
-	background-color: #4cc38f;
-/*    background-color: #F0F0F0;*/
+/*	background-color: #4cc38f;*/
+    background-color: #F0F0F0;
     /*padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 	
@@ -149,6 +149,7 @@ ul {
 li {	
 	width: auto;
 	left: 2vw;
+/*	top: 2.5vw;*/
 	position: fixed;
 	font-weight: 200;
 	text-align: left;
@@ -167,6 +168,7 @@ ul li:nth-of-type(1) {
 }
 ul li:nth-of-type(2) {
 	right: 2vw;
+/*	top: 2.5vw;*/
 	font-weight: 200;
 	text-align: right;
 	
@@ -346,7 +348,7 @@ p.title {
 	color: #111;
 	font-weight: 700;
 	position: absolute;
-	top: 0rem;
+/*	top: 0.5vw;*/
 	left: 10vw;
 	width: 90vw;
 	margin: 0;

@@ -43,7 +43,7 @@ jQuery(function($){
 if ($(window).width() > 1200) {
 	/* three columns */
 	
-	// $(".item.one").after($(".item.four"), (".item.seven"), $(".item.two"), $(".item.five"), (".item.eight"), $(".item.three"), $(".item.six"));
+	// $(".item.one").after($(".item.four"), (".item.seven"), (".item.eight"), $(".item.two"), $(".item.five"), $(".item.three"), $(".item.six"));
 	
 	var delaySpeed = 250;
     var fadeSpeed = 1000;
@@ -67,7 +67,7 @@ if ($(window).width() > 1200) {
 else if ($(window).width() > 740) {
 	/* two columns */
 	
-	// $(".item.one").after($(".item.three"), $(".item.five"), $(".item.two"), $(".item.four"), $(".item.six"));
+    // $(".item.one").after($(".item.three"), $(".item.five"), $(".item.seven"), $(".item.eight"), $(".item.two"), $(".item.four"), $(".item.six"));
 	
 	var delaySpeed = 250;
     var fadeSpeed = 1000;
