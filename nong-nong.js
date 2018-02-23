@@ -6,7 +6,7 @@ $('head').append(
 );
 
 $(window).load(function() {
-	$('body').delay(200).fadeIn("slow");
+	$('body').delay(750).fadeIn(750);
 });
 
 $(document).ready(function () {
@@ -28,7 +28,7 @@ $('ul li:nth-of-type(2)').each(function() {
 jQuery(function($){
     $("img.lazy").lazyload({
         effect: 'fadeIn',
-        effectspeed: 300,
+        effectspeed: 200,
 		threashold: 0
     });
 });
